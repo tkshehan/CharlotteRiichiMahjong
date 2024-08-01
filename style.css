@@ -1,0 +1,185 @@
+/* * {
+    border: gray;
+    border-style: dashed;
+    border-width: 1px;
+    border-collapse: collapse;
+} */
+
+ * {
+    --background-dark: #005B18;
+    --background-light: #F6FFF9;
+    --white: #fefffe;
+ }
+
+header, main, footer {
+    padding: 5px 15px;
+}
+
+.content {
+    --max-width: 750px;
+    max-width: var(--max-width);
+}
+
+body {
+    background-color: var(--background-dark);
+    color: var(--white);
+    margin: 0;
+    font-family: "Roboto Flex", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0,
+    "wdth" 100,
+    "GRAD" 0,
+    "XOPQ" 96,
+    "XTRA" 468,
+    "YOPQ" 79,
+    "YTAS" 750,
+    "YTDE" -203,
+    "YTFI" 738,
+    "YTLC" 514,
+    "YTUC" 712;
+
+    display: flex;
+    flex-direction: column;
+ 
+}
+
+sticky-header {
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+header {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap:8px;
+    max-width: var(--max-width);
+    flex-grow: 1;
+
+    .logo {
+        display: flex;
+        flex-direction: row;
+        height: 76px;
+
+    }
+
+    .title {
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 213px;
+        -webkit-text-stroke: black;
+    }
+
+}
+
+main {
+    background-color: var(--background-light);
+    color: var(--background-dark);
+    display: flex;
+    flex-direction: column;
+    padding: 15px 0px;
+    gap: 15px;
+
+    section {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        .content {
+            background-color: var(--white);
+            border: #005B18;
+            border-style: solid;
+            border-width: 2px;
+            border-radius: 20px;
+
+            margin: 5px 10px;
+            padding: 5px;
+            max-width: var(--max-width);
+            width: 100%;
+            justify-self: stretch;
+        }
+    }
+  
+}
+
+
+footer {
+    color: var(--white);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 15px;
+
+    a {
+        color:var(--white);
+    };
+    
+
+
+    .content {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+        max-width: var(--max-width);
+    }
+
+    .contact {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+ 
+    .social {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 8px;
+        img {
+            width: 25px;
+        }
+
+        div {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 8px;
+        }
+    }
+}
+
+
+img.logo {
+    object-fit: contain;
+}
+
+
+h1, h2, h3 {
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+h1 {
+    font-size: 28px;
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    margin: 0px;
+    }
+
+h2 {
+    font-size: 24px;
+    text-align: center;
+}
+
+
