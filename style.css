@@ -44,6 +44,9 @@ body {
     display: flex;
     flex-direction: column;
  
+    a {
+        color:var(--background-dark);
+    };
 }
 
 sticky-header {
@@ -55,7 +58,7 @@ sticky-header {
 
 header {
     padding: 15px 0 5px 0;
-    height: 130px;
+    min-height: 130px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -65,10 +68,10 @@ header {
     flex-grow: 1;
 
     .logo {
+        padding-left: 5px;
         display: flex;
         flex-direction: row;
         height: 109px;
-
     }
 
     .title {
