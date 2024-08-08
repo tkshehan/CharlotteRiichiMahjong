@@ -1,0 +1,246 @@
+/* * {
+    border: gray;
+    border-style: dashed;
+    border-width: 1px;
+    border-collapse: collapse;
+} */
+
+ * {
+    --background-dark: #005B18;
+    --background-light: #F6FFF9;
+    --text-dark:black;
+    --white: #fefffe;
+ }
+
+header, main, footer {
+    padding: 5px 15px;
+    font-size: 18px;
+}
+
+.content {
+    --max-width: 750px;
+    max-width: var(--max-width);
+}
+
+body {
+    background-color: var(--background-dark);
+    margin: 0;
+    font-family: "Roboto Flex", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0,
+    "wdth" 100,
+    "GRAD" 0,
+    "XOPQ" 96,
+    "XTRA" 468,
+    "YOPQ" 79,
+    "YTAS" 750,
+    "YTDE" -203,
+    "YTFI" 738,
+    "YTLC" 514,
+    "YTUC" 712;
+
+    display: flex;
+    flex-direction: column;
+ 
+}
+
+sticky-header {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    border-bottom: solid 2px;
+}
+
+header {
+    padding: 15px 0 5px 0;
+    height: 130px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap:8px;
+    max-width: var(--max-width);
+    flex-grow: 1;
+
+    .logo {
+        display: flex;
+        flex-direction: row;
+        height: 109px;
+
+    }
+
+    .title {
+        max-width: 335px;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        -webkit-text-stroke: black;
+    }
+
+}
+
+main {
+    background-color: var(--background-light);
+    color: var(--text-dark);
+    display: flex;
+    flex-direction: column;
+    padding: 15px 0px;
+    gap: 15px;
+
+    section {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: var(--white);
+            border: var(--background-dark);
+            box-sizing: border-box;
+            border-style: solid;
+            border-width: 2px;
+            border-radius: 20px;
+            box-shadow: 2px 4px #005B18;
+            
+
+            margin: 5px 10px;
+            padding: 20px 20px;
+            max-width: var(--max-width);
+            width: 100%;
+            justify-self: stretch;
+        }
+    }
+
+    .schedule {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+
+        p{
+            text-align: center;
+            text-indent: 0;
+        }
+
+        .times {
+            /* background-color: var(--background-light); */
+            /* color: var(--background-dark); */
+            border-radius: 5px;
+            box-shadow: 1px 2px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 5px;
+
+            border: solid 1px black;
+            padding: 10px;
+            width: fit-content;
+
+            .time-table {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                width: 235px;
+                font-weight: bold;
+                font-size: 20px;
+            }
+            
+        }
+    }
+  
+}
+
+
+footer {
+    color: var(--white);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 15px;
+    padding-bottom: 10px;
+
+    a {
+        color:var(--white);
+    };
+    
+
+
+    .content {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+        max-width: var(--max-width);
+    }
+
+    .contact {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+ 
+    .social {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 8px;
+        img {
+            width: 25px;
+        }
+
+        div {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 8px;
+        }
+    }
+}
+
+
+img.logo {
+    object-fit: contain;
+
+}
+
+
+h1, h2, h3 {
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+h1 {
+    font-size: 40px;
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    margin: 0px;
+    color: white;
+    }
+
+h2 {
+    font-size: 36px;
+    text-align: center;
+    color: var(--background-dark);
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    text-indent: 10%;
+    line-height: 28px;
+    max-width: 500px;
+    margin: 0;
+    padding: 0;
+}
+
+
