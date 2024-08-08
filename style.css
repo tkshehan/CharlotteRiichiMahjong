@@ -8,11 +8,13 @@
  * {
     --background-dark: #005B18;
     --background-light: #F6FFF9;
+    --text-dark:black;
     --white: #fefffe;
  }
 
 header, main, footer {
     padding: 5px 15px;
+    font-size: 18px;
 }
 
 .content {
@@ -22,7 +24,6 @@ header, main, footer {
 
 body {
     background-color: var(--background-dark);
-    color: var(--white);
     margin: 0;
     font-family: "Roboto Flex", sans-serif;
   font-optical-sizing: auto;
@@ -46,17 +47,19 @@ body {
 }
 
 sticky-header {
-    color: var(--white);
     display: flex;
     justify-content: center;
     flex-direction: row;
+    border-bottom: solid 2px;
 }
 
 header {
-
+    padding: 15px 0 5px 0;
+    height: 130px;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
     gap:8px;
     max-width: var(--max-width);
     flex-grow: 1;
@@ -64,17 +67,17 @@ header {
     .logo {
         display: flex;
         flex-direction: row;
-        height: 76px;
+        height: 109px;
 
     }
 
     .title {
+        max-width: 335px;
         text-align: center;
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        width: 213px;
         -webkit-text-stroke: black;
     }
 
@@ -82,7 +85,7 @@ header {
 
 main {
     background-color: var(--background-light);
-    color: var(--background-dark);
+    color: var(--text-dark);
     display: flex;
     flex-direction: column;
     padding: 15px 0px;
@@ -92,19 +95,63 @@ main {
         display: flex;
         flex-direction: row;
         justify-content: center;
-
+        
         .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             background-color: var(--white);
-            border: #005B18;
+            border: var(--background-dark);
+            box-sizing: border-box;
             border-style: solid;
             border-width: 2px;
             border-radius: 20px;
+            box-shadow: 2px 4px #005B18;
+            
 
             margin: 5px 10px;
-            padding: 5px;
+            padding: 20px 20px;
             max-width: var(--max-width);
             width: 100%;
             justify-self: stretch;
+        }
+    }
+
+    .schedule {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+
+        p{
+            text-align: center;
+            text-indent: 0;
+        }
+
+        .times {
+            /* background-color: var(--background-light); */
+            /* color: var(--background-dark); */
+            border-radius: 5px;
+            box-shadow: 1px 2px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 5px;
+
+            border: solid 1px black;
+            padding: 10px;
+            width: fit-content;
+
+            .time-table {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                width: 235px;
+                font-weight: bold;
+                font-size: 20px;
+            }
+            
         }
     }
   
@@ -117,6 +164,7 @@ footer {
     flex-direction: row;
     justify-content: center;
     padding-top: 15px;
+    padding-bottom: 10px;
 
     a {
         color:var(--white);
@@ -159,6 +207,7 @@ footer {
 
 img.logo {
     object-fit: contain;
+
 }
 
 
@@ -169,17 +218,29 @@ h1, h2, h3 {
 }
 
 h1 {
-    font-size: 28px;
+    font-size: 40px;
     font-family: "Nunito", sans-serif;
     font-optical-sizing: auto;
     font-weight: 900;
     font-style: normal;
     margin: 0px;
+    color: white;
     }
 
 h2 {
-    font-size: 24px;
+    font-size: 36px;
     text-align: center;
+    color: var(--background-dark);
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    text-indent: 10%;
+    line-height: 28px;
+    max-width: 500px;
+    margin: 0;
+    padding: 0;
 }
 
 
