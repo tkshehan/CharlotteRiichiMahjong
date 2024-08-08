@@ -113,7 +113,7 @@ main {
             
 
             margin: 5px 10px;
-            padding: 20px 20px;
+            padding: 25px 20px;
             max-width: var(--max-width);
             width: 100%;
             justify-self: stretch;
@@ -239,11 +239,15 @@ h2 {
 }
 
 p {
+    --line-height:28px;
     text-indent: 10%;
-    line-height: 28px;
+    line-height: var(--line-height);
     max-width: 500px;
     margin: 0;
     padding: 0;
+    &:not(:last-child)  {
+        margin-bottom: 14px;
+    }
 }
 
 
