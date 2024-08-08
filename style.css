@@ -68,7 +68,7 @@ header {
     flex-grow: 1;
 
     .logo {
-        padding-left: 5px;
+        padding-left: 12px;
         display: flex;
         flex-direction: row;
         height: 109px;
