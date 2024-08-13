@@ -250,4 +250,23 @@ p {
     }
 }
 
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color:var(--background-light);
+    font-family: "Nunito", sans-serif;
+    font-weight: 800;
+    color: var(--background-dark);
+    border: solid 2px var(--background-dark);
+    border-radius: 30px;
+
+    cursor: pointer;
+    height: 50px;
+    width: 180px;
+    text-align: center;   
+
+    text-decoration: none;
+}
 
