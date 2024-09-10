@@ -7,17 +7,15 @@ const url = `${base}&sheet=${sheetName}&tq=${query}`;
 const url2 = `${base}&sheet=${sheetName2}&tq=${query}`;
 
  
-
 fetch(url)
-.then(response => {
-    if (!response.ok) {
-      throw new Error('Network response was not ok');
-    }
-    return response.json();
-  })
-  .then(data => {
-    console.log(data);
-  })
-  .catch(error => {
-    console.error('Error:', error);
-  });      
+.then(res => res.text())
+.then(rep => {
+    const jsData = JSON.parse(rep.substring(47).slice(0,-2));
+    console.log(jsData);
+    const colz = [];
+    jsData.table.cols.forEach((heading)=>{
+        if(heading.label) {
+            colz.push(heading.label);
+        }
+    })
+})
