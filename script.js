@@ -1,9 +1,23 @@
-var url = "https://sheets.googleapis.com/v4/spreadsheets/1HPuYNytvYN-vVzfNxhzincWE5gCAGkepdA5GvO7Gmvw/values/UnrankedPlayers!B2:D25?key=AIzaSyApwsCEntAZOeNC5vljDqUWCUsSe3JZnHc&includeGridData=true";  
+const sheetID = '1HPuYNytvYN-vVzfNxhzincWE5gCAGkepdA5GvO7Gmvw';
+const base = `https://docs.google.com/spreadsheets/d/${sheetID}/gviz/tq?`;
+const sheetName ='Participants';
+const sheetName2 = 'Leaderboard';
+const query = encodeURIComponent('select *');
+const url = `${base}&sheet=${sheetName}&tq=${query}`;
+const url2 = `${base}&sheet=${sheetName2}&tq=${query}`;
+
+ 
 
 fetch(url)
-  .then(function (response) {
-    console.log(response);                                                                                                                                                    
+.then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.json();
   })
-  .catch(function (error) {
-    console.log(error);                                                                                                                                                       
-  });             
+  .then(data => {
+    console.log(data);
+  })
+  .catch(error => {
+    console.error('Error:', error);
+  });      
