@@ -131,6 +131,10 @@ main {
             text-indent: 0;
         }
 
+        .location {
+            text-align: center;
+        }
+
         .times {
             /* background-color: var(--background-light); */
             /* color: var(--background-dark); */
