@@ -57,7 +57,7 @@ sticky-header {
 }
 
 header {
-    padding: 15px 0 5px 0;
+    padding: 15px 0 15px 0;
     min-height: 130px;
     display: flex;
     flex-direction: row;
@@ -139,14 +139,15 @@ main {
             /* background-color: var(--background-light); */
             /* color: var(--background-dark); */
             border-radius: 5px;
-            box-shadow: 1px 2px;
+            box-shadow: 1px 2px var(--background-dark);
+            
 
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             gap: 5px;
 
-            border: solid 1px black;
+            border: solid 1px var(--background-dark);
             padding: 10px;
             width: fit-content;
 
@@ -170,13 +171,12 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding-top: 15px;
-    padding-bottom: 10px;
+    padding-top: 25px;
+    padding-bottom: 20px;
 
     a {
         color:var(--white);
     };
-    
 
 
     .content {
@@ -259,10 +259,10 @@ p {
     justify-content: center;
     align-items: center;
 
-    background-color:var(--background-light);
+    background-color: var(--background-dark);
     font-family: "Nunito", sans-serif;
     font-weight: 800;
-    color: var(--background-dark);
+    color: var(--background-light);
     border: solid 2px var(--background-dark);
     border-radius: 30px;
 
